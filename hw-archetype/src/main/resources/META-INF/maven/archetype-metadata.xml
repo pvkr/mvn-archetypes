@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="pvkr-hello-world" xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0">
+
+    <requiredProperties>
+        <requiredProperty key="parent_artifactId">
+            <defaultValue>${artifactId}-all</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="module">
+            <defaultValue>${artifactId}-simple</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="gitignore">
+            <defaultValue>.gitignore</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>1.0</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory/>
+            <includes>
+                <include>__gitignore__</include>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <modules>
+        <module id="" dir="__module__" name="__module__">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory/>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
